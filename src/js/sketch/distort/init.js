@@ -23,12 +23,12 @@ export default function() {
   //
   var sphere = null;
   var bg = null;
-  var light = new THREE.HemisphereLight(0xffffff, 0x666666, 1);
+  var light = new THREE.HemisphereLight(0xF1B617, 0xA42377, 1);
   var sub_scene = new THREE.Scene();
   var sub_camera = new ForceCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-  var sub_light = new THREE.HemisphereLight(0xffffff, 0x666666, 1);
+  var sub_light = new THREE.HemisphereLight(0xF1B617, 0xA42377, 1);
   var force = new Force2();
-  var time_unit = 1;
+  var time_unit = 0.2;
   var render_target = new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight, {
     magFilter: THREE.NearestFilter,
     minFilter: THREE.NearestFilter,
@@ -39,7 +39,7 @@ export default function() {
 
   var createSphere = function() {
     var geometry = new THREE.BufferGeometry();
-    geometry.fromGeometry(new THREE.OctahedronGeometry(200, 5));
+    geometry.fromGeometry(new THREE.OctahedronGeometry(600, 5));
     var material = new THREE.ShaderMaterial({
       uniforms: THREE.UniformsUtils.merge([
         THREE.UniformsLib['lights'],
