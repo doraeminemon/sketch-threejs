@@ -2,7 +2,7 @@
 // 対象パスやオプションを指定
 
 const DIR = module.exports.DIR =  {
-  PATH: '/sketch-threejs',
+  PATH: '/',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'docs'

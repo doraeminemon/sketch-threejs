@@ -21,7 +21,7 @@ export default class BackgroundImage {
   init(callback) {
     const loader = new THREE.TextureLoader();
     loader.load(
-      '/sketch-threejs/img/sketch/glitch/osaka.jpg',
+      '/img/sketch/glitch/osaka.jpg',
       (tex) => {
         tex.magFilter = THREE.NearestFilter;
         tex.minFilter = THREE.NearestFilter;
